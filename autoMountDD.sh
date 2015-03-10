@@ -17,10 +17,10 @@ hdd="${srcDev:0:9}"
 umount $hdd
 
 #create the folder (for now locally in the homefolder)
-mkdir -p /home/$home/$timestamp
+mkdir -p /mnt/MacBack/$timestamp
 
 #create a file that can be used as the file location later. 
-path=/home/$home/$timestamp/$timestamp.iso
+path=/mnt/MacBack/$timestamp/$timestamp.iso
 touch $path
 
 #running dd to clone the drive
