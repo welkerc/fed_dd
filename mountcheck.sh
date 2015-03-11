@@ -2,7 +2,7 @@
 
 home=cwelker
 for mountedPath in `mount | cut -d ' ' -f 3`; do
-    if [[ "${mountedPath}" =~ .*$cwelker.* ]]; then
+    if [[ "${mountedPath}" =~ .*$home.* ]]; then
   	echo ${mountedPath}
     fi
 done
