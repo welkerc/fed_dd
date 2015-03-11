@@ -13,7 +13,7 @@ home=cwelker
 #srcDev="$(mount | grep "$home")"
 #hdd="${srcDev:0:9}"
 for mountedPath in `mount | cut -d ' ' -f 3`; do
-    if [[ "${mountedPath}" =~ .*cwelker.* ]]; then
+    if [[ "${mountedPath}" =~ .*$home.* ]]; then
   	echo ${mountedPath}
     fi
 done
@@ -24,7 +24,7 @@ done
 #create the folder (for now locally in the homefolder)
 mkdir -p /mnt/MacBack/$timestamp
 
-#create a file that can be used as the file location later. 
+#create a file that can be used as the file location later.
 path=/mnt/MacBack/$timestamp/
 
 #start timeer timing for testing purposes
