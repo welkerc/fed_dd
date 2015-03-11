@@ -23,5 +23,15 @@ mkdir -p /mnt/MacBack/$timestamp
 path=/mnt/MacBack/$timestamp/$timestamp.iso
 touch $path
 
-#running dd to clone the drive
+#start timeer timing for testing purposes
+echo $(date +%D_%T)  > timer.txt
+
+#this maynot be the way to go -  running dd to clone the drive
 dd if=$hdd of=$path
+
+#rsyncing the drive to a folder
+#rsync -aAxv $hdd $path
+
+#end timeer timing for testing purposes
+echo $(date +%D_%T) >> timer.txt
+cat timer.txt
